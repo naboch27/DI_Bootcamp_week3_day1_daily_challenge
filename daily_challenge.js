@@ -15,14 +15,20 @@ Faut-il encore utiliser un tableau pour les planètes ? Ou un tableau d'objets ?
 
 
 const planets = ["mars", "saturn", "jupiter", "mercury", "venus", "earth", "uranus"]
+const couleur = ["red", "silver", "blue", "green", "yellow", "white", "black"]
 
+let i = 0
 for (const planet of planets) {
-    console.log("planet",planet)
-    const div = document.createElement("div")
-    div.classList.add("planet:")
-    div.classList.add(planet)
-     console.log("div : ",div)
-   // const section = document.querySelector(".listPlanets")
-   // section?.appendChild(div)
-}
+  // console.log("planet",planet)
+  const div = document.createElement("div")
 
+  div.classList.add("planet")
+  // div.classList.add(planet)
+  document.body.appendChild(div)
+  document.querySelectorAll(".planet")[i].style.background = couleur[i]
+  i++
+  //console.log("div:",div)
+  console.log(planet)
+  // const section = document.querySelector(".listPlanets")
+  // section?.appendChild(div)
+}
